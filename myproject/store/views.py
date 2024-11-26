@@ -12,3 +12,7 @@ def about(request):
 
 def resume(request):
     return render(request, 'resume.html')
+
+def contact(request):
+    if request.method == 'POST'
+    return render(request, 'contact.html')
