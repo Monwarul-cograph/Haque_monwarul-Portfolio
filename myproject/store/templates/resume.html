@@ -5,7 +5,7 @@
   {% load static %}
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume - Personal Bootstrap Template</title>
+  <title>Resume - Haque Monwarul portfolio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -51,28 +51,10 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'resume' %}">Resume</a></li>
+          <li><a href="{% url 'portfolio' %}">Portfolio</a></li> 
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -89,7 +71,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Resume</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              
             </div>
           </div>
         </div>
@@ -112,60 +94,67 @@
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
 
-            <div class="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
+            <h3 class="resume-title">学歴</h3>
             <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+              <h4>学士号- メディアコミュニケーション学部 情報文化学科</h4>
+              <h5>２０２０年４月 - ２０２４年３月</h5>
+              <p><em>江戸川大学</em></p>
+              <p>情報文化学科でバックエンドシステム開発やデータベース設計、API開発について学びました</p>
             </div><!-- Edn Resume Item -->
 
             <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+              <h4>日本語学校（日本）</h4>
+              <h5>２０１８年４月 - ２０２０年３月</h5>
+              <p><em>UJS Language Institute、東京</em></p>
+              <p>日本語の読み書きや会話スキルを向上させました</p>
             </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>日本語学校（母国）</h4>
+              <h5>２０１７年７月 - ２０１７年１２月</h5>
+              <p><em>GLOBAL Language Institute、ダッカ</em></p>
+              <p>日本語の読み書きや会話スキルを向上させました</p>
+            </div><!-- End Resume Item -->
+            
+            <div class="resume-item">
+              <h4>Lalbagh Government Model College（高校）</h4>
+              <h5>２０１５年７月 - ２０１７年６月</h5>
+              <p><em>ダッカ、バングラデシュ</em></p>
+              <p>ビジネス学科</p>
+            </div><!-- End Resume Item -->
+            
 
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
+            <h3 class="resume-title">職歴 </h3>
             <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
+              <h4>バックエンドエンジニア、コグラフ株式会社（品川、東京）</h4>
+              <h5>２０２４年４月 - 現在</h5>
+              <p><h2>業務概要</h2></p>
+              <p>社内営業部門向けの案件検索システムのダッシュボードを開発。
+                求人情報をWebスクレイピングを用いて取得し、フロントエンドと連携させ、営業チームが迅速に情報を検索・分析できる環境を提供。
+              </p>
+              <p><h4>担当業務</h4></p>
+
               <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                <li><b>PostgreSQLデータベースの設定と管理</b>：ローカルデータベースを設定し、データの効率的な管理を実現。</li>
+                <li><b>Webスクレイピングでのデータ抽出</b>：特定のWebサイトから求人情報を収集し、API制限やサイト構造の変更にも対応可能な仕組みを構築。</li>
+                <li><b>Djangoを使用した管理画面の実装</b>：Djangoモデルを設計し、データベースとの連携をスムーズにする管理画面を開発。</li>
+                <li><b>REST APIの作成</b>：データの提供や管理を効率化するためのAPIを構築。</li>
               </ul>
+
+              <p><h4>工夫したポイントと成果</h4></p>
+              <ul>
+                <li><b>データ収集の効率化</b>：API制限やWebページ構造の変更に対する対応策として、エラーハンドリングと再試行機能を導入しました。これにより、データ収集の安定性と信頼性が向上しました。</li>
+                <li><b>チームワークの強化</b>：開発の効率化を図るため、定期的に報告・連絡・相談を行い、チームメンバーとの情報共有を積極的に行いました。これにより、プロジェクトの進捗がスムーズになり、協力体制が強化されました。</li>
+              </ul>
+
+              
             </div><!-- Edn Resume Item -->
 
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
+            <!-- Edn Resume Item -->
 
           </div>
 
@@ -180,13 +169,9 @@
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <h3 class="sitename">Personal</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href = "{{ social.Linkedin_links}}" ><i class="bi bi-linkedin"></i></a>
+        <a href = "{{ social.Line_links }}"><i class="bi bi-line"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
@@ -197,7 +182,6 @@
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </div>

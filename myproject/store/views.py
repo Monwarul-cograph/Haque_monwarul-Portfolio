@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import * 
+from .forms import *
 
 # Create your views here.
 def index(request):
@@ -8,11 +9,28 @@ def index(request):
 
 def about(request):
     about = About.objects.get()
-    return render(request, 'about.html', {'about': about})
+    social = Social.objects.get()
+    return render(request, 'about.html', {'about': about,'social': social})
 
 def resume(request):
-    return render(request, 'resume.html')
+    resume = Resume.objects.get()
+    social = Social.objects.get()
+    return render(request, 'resume.html', {'resume': resume, 'social': social})
+
+def portfolio(request):
+    social = Social.objects.get()
+    return render(request, 'portfolio.html', {'social':social})
 
 def contact(request):
-    if request.method == 'POST'
-    return render(request, 'contact.html')
+    social = Social.objects.get()
+    # form = ContactForm(request.POST)
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect ('index')
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {'form': form, 'social':social})
+

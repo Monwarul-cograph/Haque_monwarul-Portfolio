@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(About)
 admin.site.register(Social)
 admin.site.register(Contact)
+admin.site.register(Resume)
